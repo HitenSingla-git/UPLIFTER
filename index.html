@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uplifter - Giving Everyone a Chance to Rise</title>
+
+
+<!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #004d40;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-left {
+      font-size: 1.8em;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 25px;
+      text-decoration: none;
+      font-size: .9em;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: rgb(61, 125, 179);
+    }
+
+    .auth-buttons a {
+      background-color: #f9fafd;
+      font-size: 23px;
+      color: rgb(9, 20, 175);
+      padding: 8px 15px;
+      margin-left: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .auth-buttons a:hover {
+       background-color:  rgb(9, 20, 175);
+            color:  #f9fafd;
+            box-shadow: 5px 5px 10px gray;
+            border-color: gray;
+           
+            
+    }
+
+    .hero {
+      background: linear-gradient(to right, #43368a, #43368a);
+      color: white;
+      text-align: center;
+      padding: 0px 0px;
+      height: 700px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    .hero .auth-buttons {
+      margin-top: 35px;
+  color: aliceblue;
+    }
+
+    .tiles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 50px 20px;
+      background-color: white;
+    }
+
+    .services-heading {
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      margin: 40px 0 0 0;
+    }
+
+    .tile {
+      background-color: #e0f2f1;
+      padding: 20px;
+      width: 280px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .tile:hover {
+      transform: translateY(-5px);
+      background-color: #b2dfdb;
+    }
+
+    .tile img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+
+    .developers-section {
+      background-color: #f0f0f0;
+    }
+
+    .developer-photo {
+      width: 220px;
+      height: 220px;
+      background-color: #ccc;
+      margin: 15px auto;
+      border-radius: 50%;
+    }
+
+    .dark-section {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 50px 20px;
+    }
+
+    .dark-section h2 {
+      color:#43368a;
+    }
+
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    @media(max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .tiles {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .auth-buttons {
+        margin-top: 10px;
+      }
+    }
+
+    .carousel-container {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  position: relative;
+  width: 90%;
+  height: 520px;
+}
+
+.carousel-track {
+  display: flex;
+  width: 400%;
+  animation: scrollCarousel 30s linear infinite;
+}
+
+.carousel-track img {
+  width: 100%;
+  height: 1120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn {
+      background-color: white;
+      width:150px;
+      height: 40px;
+      text-align: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      cursor: pointer;
+      font-weight: bolder;
+      margin-right: 10px;
+      border: 1px;
+      transition: ease all .5s;
+      
+      }
+
+      .btn
+    {
+  
+      color: rgb(49, 31, 153);
+      border: 0px;
+      border-right:4px gray solid;
+      border-bottom:4px gray solid;
+      border-radius: 25px 25px 25px 25px;
+    }
+    
+    .btn:hover
+    {
+      border-radius: 0px 0px 0px 0px;;
+    }
+
+  .btn:hover{
+    background-color:rgb(49, 31, 153);
+      color: rgb(243, 244, 248);
+      box-shadow: 5px 5px 10px gray;;
+      
+   }
+   .btn:active{
+      transform: translate(0px,5px);
+      transition: ease all .5s;
+   }
+
+@keyframes scrollCarousel {
+ 
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-400vw); } /* Scroll through 4 full images */
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-left">Uplifter</div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#services">Services</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#developers">Developers</a>
+      <a href="#about">About</a>
+    </nav>
+    <!-- <div class="auth-buttons">
+      <a href="#">Login</a>
+      <a href="#">Sign Up</a>
+    </div> -->
+  </header>
+
+
+
+  <!-- Services Section -->
+    <!-- Hero Section Replaced with Marquee -->
+  <div class="hero" id="hero">
+  <div class="carousel-container">
+  <div class="carousel">
+    <div class="carousel-track">
+      <img src="/uploads/uplifters1.jpg" alt="Image 1">
+      <img src="/uploads/uplifters.jpg" alt="Image 2">
+      <img src="/uploads/uplifters2.jpg" alt="Image 3">
+      <img src="/uploads/uplifters3.jpg" alt="Image 4">
+    </div>
+  </div>
+</div>
+
+  <h2>Giving Everyone a Chance to Rise</h2>
+  
+ <nav align="center">
+        <br>
+        <input type="submit" id="sgn" class="btn btn-signup" value="SIGNUP" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <input type="submit" id="lgn" class="btn btn-login" value="LOGIN" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+    </nav>
+
+</div>
+
+
+  <!-- Services Section -->
+  <div class="services-heading" id="services">Our Services</div>
+  <div class="tiles">
+    <div class="tile">
+      <img src="https://img.icons8.com/ios-filled/100/briefcase.png" alt="Job Icon">
+      <h3>Find a Job</h3>
+      <p>Discover employment tailored for those in need.</p>
+    </div>
+    <div class="tile">
+      <img src="https://img.icons8.com/ios-filled/100/helping-hand.png" alt="Help Icon">
+      <h3>Offer Help</h3>
+      <p>Volunteer, train or hire – make an impact.</p>
+    </div>
+    <div class="tile">
+      <img src="https://img.icons8.com/ios-filled/100/education.png" alt="Support Icon">
+      <h3>Skill Support</h3>
+      <p>Free access to training, food, and shelter services.</p>
+    </div>
+  </div>
+
+  <!-- How It Works -->
+  <section id="how-it-works">
+    <h2>How It Works</h2>
+    <h3>
+      We offer a dual-interface platform: one for Volunteers and one for Clients. <br>
+      Volunteers act as helpers, registering underprivileged individuals (clients) and entering their details. <br>
+      Based on the skills and needs of each client, volunteers assist in matching them with suitable job opportunities, <br>
+      creating a bridge between hope and employment.
+    </h3>
+  </section>
+  
+
+  <section id="how-it-works">
+    <h2>Our Mission</h2>
+    <h3>
+     Empowering lives through technology, our mission is to connect underprivileged individuals with job opportunities. <br>
+      By combining compassion with innovation, we aim to create a platform that uplifts communities, restores dignity, <br>
+       and brings hope—proving that technology, when guided by humanity, can make a real and lasting difference.
+    </h3>
+  </section>
+  <!-- Meet Developers Section with Two Images -->
+  <section class="developers-section" id="developers">
+    <h2>Meet the Developers</h2>
+    <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
+      <div class="developer-photo"></div>
+      <div class="developer-photo"></div>
+    </div>
+   
+    <!-- <p><strong>[Your Teammate]</strong> – Frontend, Design, Outreach</p>
+    <p><em>(Developer pictures will be added above)</em></p> -->
+  </section>
+
+  <!-- About Us and Contact Details Side by Side -->
+  <section class="dark-section" id="about">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 60px; max-width: 1100px; margin: auto;">
+      <div style="flex: 1; min-width: 250px;">
+        <h2>About Us</h2>
+        <p>
+          Uplifter is a mission-driven platform designed to help beggars, the homeless, and the underprivileged reintegrate into society with dignity. 
+          We provide skill-based job opportunities, training, and emotional support to give people a second chance at life.
+        </p>
+      </div>
+      <div style="flex: 1; min-width: 250px;">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:support@uplifter.org" style="color:rgb(61, 125, 179);">hiten2706@gmail.com</a></p>
+        <p>Phone: <a href="tel:+919876543210" style="color:rgb(61, 125, 179);">+91-6283830075</a></p>
+      <!-- <p>Location: Bathinda, India</p> -->
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Signup Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5">Signup</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label class="form-label">EMAIL ID</label>
+          <input type="email" class="form-control" id="email">
+          <label class="form-label">PASSWORD</label>
+          <input type="password" class="form-control" id="password">
+          <label class="form-label">USER TYPE</label>
+          <select name="txtvalue" id="usertype" class="form-select">
+            <option value="client">CLIENT</option>
+            <option value="volunteer">VOLUNTEER</option>
+          </select>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="SGN">SIGNUP</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Login Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5">Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label class="form-label">EMAIL ID</label>
+          <input type="email" class="form-control" id="email1">
+          <label class="form-label">PASSWORD</label>
+          <input type="password" class="form-control" id="password1">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="LGN">LOGIN</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+  <footer>
+    &copy; 2025 Uplifter. All rights reserved.
+  </footer>
+
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  $(document).ready(function () {
+    $('#LGN').click(function () {
+      let obj1 = {
+        type: "get",
+        url: "/login",
+        data: {
+          EMAIL: $("#email1").val(),
+          PASSWORD: $("#password1").val()
+        }
+      };
+
+      $.ajax(obj1)
+        .then(function (response) {
+          if (typeof response === "string") {
+            if (response === "client") {
+              window.location.href = "client-dash.html";
+            } else if (response === "volunteer") {
+              window.location.href = "vol-dash.html";
+            } else {
+              alert("Unexpected response: " + response);
+            }
+          } else if (typeof response === "object" && response.utype) {
+            if (response.utype === "client") {
+              window.location.href = "client-dash.html";
+            } else if (response.utype === "volunteer") {
+              window.location.href = "vol-dash.html";
+            }
+          } else {
+            alert("Login failed: " + JSON.stringify(response));
+          }
+        })
+        .fail(function (err) {
+          console.error("Login Error:", err);
+          alert("Login failed. Check console for details.");
+        });
+    });
+  });
+</script>
+
+
+</body>
+</html>
