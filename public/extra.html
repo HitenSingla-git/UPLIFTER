@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uplifter - Giving Everyone a Chance to Rise</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #004d40;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-left {
+      font-size: 1.8em;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc80;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #43368a, #43368a);
+      color: white;
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .tiles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 50px 20px;
+      background-color: white;
+    }
+
+    .services-heading {
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      margin: 40px 0 0 0;
+    }
+
+    .tile {
+      background-color: #e0f2f1;
+      padding: 20px;
+      width: 280px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .tile:hover {
+      transform: translateY(-5px);
+      background-color: #b2dfdb;
+    }
+
+    .tile img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .developer-photo {
+      width: 150px;
+      height: 150px;
+      background-color: #ccc;
+      margin: 15px auto;
+      border-radius: 50%;
+    }
+
+    .dark-section {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 50px 20px;
+    }
+
+    .dark-section h2 {
+      color: #ffcc80;
+    }
+
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .btn {
+      background-color: rgb(49, 31, 153);
+      width: 120px;
+      color: white;
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #fff;
+      color: rgb(49, 31, 153);
+      border: 2px solid gray;
+      box-shadow: 5px 5px 10px gray;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .tiles {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="nav-left">Uplifter</div>
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#services">Services</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#developers">Developers</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<!-- Hero Section with Carousel -->
+<div class="hero" id="hero">
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="/public/uploads/uplifters1.jpg" alt="Image 1">
+        <img src="/public/uploads/uplifters.jpg" alt="Image 2">
+        <img src="/public/uploads/uplifters2.jpg" alt="Image 3">
+        <img src="/public/uploads/uplifters3.jpg" alt="Image 4">
+      </div>
+    </div>
+  </div>
+
+  <h2>Giving Everyone a Chance to Rise</h2>
+
+  <!-- Login / Signup Buttons -->
+  <nav align="center">
+    <br>
+    <input type="submit" id="sgn" class="btn btn-signup" value="SIGNUP" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <input type="submit" id="lgn" class="btn btn-login" value="LOGIN" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+  </nav>
+</div>
+
+<!-- Services, How It Works, About, Developers sections here... -->
+<!-- (keep your existing sections as-is) -->
+
+<!-- Signup Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5">Signup</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label class="form-label">EMAIL ID</label>
+          <input type="email" class="form-control" id="email">
+          <label class="form-label">PASSWORD</label>
+          <input type="password" class="form-control" id="password">
+          <label class="form-label">USER TYPE</label>
+          <select name="txtvalue" id="usertype" class="form-select">
+            <option value="client">CLIENT</option>
+            <option value="volunteer">VOLUNTEER</option>
+          </select>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="SGN">SIGNUP</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Login Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5">Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label class="form-label">EMAIL ID</label>
+          <input type="email" class="form-control" id="email1">
+          <label class="form-label">PASSWORD</label>
+          <input type="password" class="form-control" id="password1">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="LGN">LOGIN</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Uplifter. All rights reserved.
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Login Logic -->
+<script>
+  $(document).ready(function () {
+    $('#LGN').click(function () {
+      let obj1 = {
+        type: "get",
+        url: "/login",
+        data: {
+          EMAIL: $("#email1").val(),
+          PASSWORD: $("#password1").val()
+        }
+      };
+
+      $.ajax(obj1)
+        .then(function (response) {
+          if (typeof response === "string") {
+            if (response === "client") {
+              window.location.href = "client-dash.html";
+            } else if (response === "volunteer") {
+              window.location.href = "vol-dash.html";
+            } else {
+              alert("Unexpected response: " + response);
+            }
+          } else if (typeof response === "object" && response.utype) {
+            if (response.utype === "client") {
+              window.location.href = "client-dash.html";
+            } else if (response.utype === "volunteer") {
+              window.location.href = "vol-dash.html";
+            }
+          } else {
+            alert("Login failed: " + JSON.stringify(response));
+          }
+        })
+        .fail(function (err) {
+          console.error("Login Error:", err);
+          alert("Login failed. Check console for details.");
+        });
+    });
+  });
+</script>
+
+</body>
+</html>
